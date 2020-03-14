@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>invalid</title>
+    <style>
+        textarea {
+            border: 3px solid black;
+        }
+
+        #target {
+            width: 200px;
+            height: 300px;
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <div>请用原生 js 实现一个函数,给页面制定的任意一个元素添加一个透明遮罩(透明度可变,默认 0.2),
+        使这个区域点击无效,要求兼容 IE8+及各主流浏览器,遮罩层效果如下图所示:</div>
+    <div id="target"></div>
+    <script>
+
+        function addMask(eleid) {
+
+            console.log(eleid)
+            let elemid = document.getElementById(eleid);
+            let mask = document.createElement('div');
+            mask.style.width = 200 + 'px';
+            mask.style.height = 300 + 'px';
+
+            mask.style.position = 'absolute';
+            mask.style.backgroundColor = 'yellow';
+            // mask.style.zIndex = 9999;
+            mask.style.display = 'block';
+            mask.style.opacity = 0.2;
+            target.appendChild(mask);
+        }
+        addMask('target');
+
+        target.addEventListener('click', function () {
+            console.log('click');
+        }, false);
+
+    </script>
+</body>
+
+</html>

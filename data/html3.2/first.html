@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单input</title>
+    <script src="first.js"></script>
+    <style>
+        table {
+            background-color: seagreen;
+            width: 600px;
+            text-align: left;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* input[type="radio"] {
+            display: none;
+        } */
+
+        /* label {
+            position: relative;
+            margin-right: 30px;
+
+        } */
+
+        /* label::after {
+            display: inline-block;
+            content: "";
+            width: 16px;
+            height: 16px;
+            border: 2px solid black;
+            margin-left: 6px;
+            vertical-align: bottom;
+            position: absolute;
+
+        } */
+
+        /* #radio_true:checked+label::after {
+            content: "L";
+           
+            transform: rotate(60deg)
+        }
+
+        #radio_flase:checked+label::after {
+            content: "L";
+         
+            transform: rotate(60deg)
+        } */
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>信息注册</h1>
+        <hr color="green">
+        <form action="information.php" method="GET" target="_blank" id="information" autocomplete="off">
+            <table align="center">
+                <tr>
+                    <td> 名称：</td>
+                    <td>
+                        <input type="text" name="username" placeholder="请输入名称" id="username" />
+                    </td>
+                </tr>
+                <tr>
+                    <td> 数量：</td>
+                    <td>
+                        <input type="text" name="numbers" placeholder="请输入数量" id="numbers" />
+                    </td>
+                </tr>
+                <tr>
+                    <td> 描述：</td>
+                    <td>
+                        <textarea name="describe" rows="6" cols="50px" placeholder="请输入描述"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td> 选择：</td>
+                    <td>
+                        <label for="radio_true">是
+                            <!-- <img src="img/choise.png" alt="" height="20px" width="20px"> -->
+                        </label>
+                        <input type="radio" name="choise" value="true" id="radio_true" />
+
+                        <label for="radio_false">否
+                            <!-- <img src="img/choise.png" alt="" height="20px" width="20px"> -->
+                        </label>
+                        <input type="radio" name="choise" value="false" id="radio_false" />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> <input type="button" value="提交btn" id="btn">
+                        <input type="reset" />
+                        <input type="submit" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>输出一个长度为5，且内容不重复的数组arr</title>
+</head>
+
+<body>
+    <div>用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值</div>
+    <script>
+        var arr = new Array(5);
+        var num = randomNumber();
+        var i = 0;
+
+        function randomArr(arr, num) {
+            if (arr.indexOf(num) < 0) {
+                arr[i] = num;
+                i++;
+            } else {
+                num = randomNumber();
+            }
+            if (i > 4) {
+                console.log(arr);
+                return;
+            } else {
+                randomArr(arr, num)
+            }
+        }
+        function randomNumber() {
+            return Math.floor(Math.random() * 31 + 2)
+        }
+        randomArr(arr, num);
+
+    </script>
+
+</body>
+
+</html>

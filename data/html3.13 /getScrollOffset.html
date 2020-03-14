@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            height: 10000px;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>完成函数 getScrollOffset 返回窗口滚动条偏移量</div>
+    <script>
+        function getSrollOffset(w) {
+
+            console.log('获取滚动条到顶部的垂直高度', document.getElementsByTagName('div')[0].scrollTop);
+            // console.log('获取滚动条到左边的垂直宽度', document.body.scrollLift)
+        }
+        let div = document.getElementsByTagName('div')[0];
+        let body = document.getElementsByTagName('body')[0];
+        document.addEventListener('scroll', getSrollOffset)
+        // getSrollOffset();
+    </script>
+
+</body>
+
+</html>

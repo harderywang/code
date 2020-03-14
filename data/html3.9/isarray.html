@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>isArray</title>
+</head>
+
+<body>
+    <div>如何判断一个对象是否为数组</div>
+    <script>
+        function isArray(arr) {
+            if (toString.call(arr) === '[object Array]') {
+                console.log(true);
+            } else {
+                console.log(false);
+            }
+
+        }
+        let a = [2, 2, 3, 4, 5, 56, 5];
+        let b = new Date();
+        isArray(a)
+    </script>
+</body>
+
+</html>

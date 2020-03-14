@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>写一个方法把下划线命名转成大驼峰命名</div>
+    <script>
+
+        function changeStr(str) {
+            let arr = [];
+            let newStr = '';
+            arr = str.split('_');
+            arr.map((item) => {
+                newStr += item.substr(0, 1).toUpperCase() + item.substr(1)
+            });
+            console.log(newStr);
+        }
+        changeStr('_abc_ghe_nb_w_')
+    </script>
+
+</body>
+
+</html>

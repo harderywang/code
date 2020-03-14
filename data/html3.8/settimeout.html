@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>settimeout</title>
+</head>
+
+<body>
+    <div>下面这段代码想要循环延时输出结果 0 1 2 3 4</div>
+    <script>
+
+        let i = 0;
+        function event() {
+            console.log(i);
+            i++;
+            if (i > 4) {
+                clearInterval(interval);
+            }
+        }
+        let interval = setInterval(event, 2000);
+        // function number() {
+        //     if (i < 5) {
+        //         interval;
+        //     }
+        // }
+        // number();
+
+        // setInterval(number, 2000)
+        // function number() {
+        //     for (i = 0; i < 5; i++) {
+        //         setTimeout(console.log(i), 2000)
+        //     }
+        // }          async    await   自己调用
+        // number();
+
+    </script>
+</body>
+
+</html>

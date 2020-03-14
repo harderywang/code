@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>function</title>
+</head>
+
+<body>
+    <div>如何判断一个对象是否为函数</div>
+    <script>
+        function fun() {
+            console.log('aaaa');
+        }
+        var a = [2, 4, 56, 7, 5];
+        function isFunction(arg) {
+            if (toString.call(arg) === '[object Function]') {
+                console.log(true)
+            } else {
+                console.log(false)
+            }
+        }
+        isFunction(fun)
+    </script>
+
+</body>
+
+</html>

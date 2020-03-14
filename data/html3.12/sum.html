@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sum</title>
+</head>
+
+<body>
+    <div> 写一个方法，传入数字x，从一个一维数组里找到两个数字符合“n1 + n2 ＝ x”</div>
+    <script>
+        function findsum(arr, x) {
+            for (i = 0; i < arr.length; i++) {
+                for (j = 0; j < arr.length; j++) {
+                    if (arr[i] + arr[j] === x) {
+                        console.log(arr[i], arr[j])
+                        arr.splice(j, 1);
+                    }
+                }
+            }
+        }
+        findsum([2, 3, 5, 6, 78, 9, 5, 3], 80)
+    </script>
+</body>
+
+</html>

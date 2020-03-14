@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>add and remove</title>
+    <!-- 加载 React。-->
+    <!-- 注意: 部署时，将 "development.js" 替换为 "production.min.js"。-->
+    <!-- <script src="https://unpkg.com/react@16/umd/react.development.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script> -->
+
+    <!-- 加载我们的 React 组件。-->
+    <!-- <script src="like_button.js"></script> -->
+
+    <script src="index.js"></script>
+    <style>
+        body {
+            background-color: rgb(216, 220, 230);
+        }
+
+        table {
+            border: 2px solid black;
+            background-color: rgb(219, 178, 66);
+        }
+
+        tr {
+            border: 1px solid black;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+
+        input[type='text'],
+        textarea {
+            border: 0px;
+            background-color: rgb(219, 178, 66);
+        }
+
+        #td_end {
+            text-align: center
+        }
+
+        input[type='button'] {
+            background-color: rgb(226, 189, 87);
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <table cellspacing=0 align="center">
+            <caption>产品信息</caption>
+            <thead>
+                <tr>
+                    <td>名称</td>
+                    <td>数量</td>
+                    <td>描述</td>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <tr id="tr" value="3">
+                    <td>
+                        <input type="text" name="name" />
+                    </td>
+                    <td>
+                        <input type="text" name="amount" />
+                    </td>
+                    <td>
+                        <textarea name="descride" cols=30 rows=1></textarea>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" id="td_end">
+                        <input type="button" value="增加" id="addTbody" />
+                        <input type="button" value='减少' id="removeTbody" />
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function randomNumber() {
+            let a = [];
+            let repeat = [];
+            let randomArray = [];
+            let n = '';
+            //随机一百个字符串并添加进数组
+            for (var i = 0; i < 100; i++) {
+                n = String(Math.floor(Math.random() * 100 + 1));
+                repeat.push(n);
+            }
+            //去重
+            for (j = 0; j < 100; j++) {
+                console.log(repeat)
+                if (repeat.indexOf(repeat[j]) === j) {
+                    randomArray.push(repeat[j]);
+                }
+            }
+        }
+        randomNumber();
+    </script>
+</body>
+
+</html>

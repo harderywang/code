@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>time</title>
+</head>
+
+<body>
+    <div>网页中实现一个计算当年还剩多少时间的倒数计时程序,
+        要求网页上实时动态显示"×× 年还剩 ×× 天 ×× 时 ×× 分 ×× 秒"</div>
+    <div id='time'></div>
+    <script>
+        function timeLeft() {
+            let start = new Date();
+            let year = start.getFullYear(),
+                // month = starty.getMonth() + 1,
+                // day = start.getDate(),
+                // week = start.getDay(),
+                // hour = start.getHours(),
+                // minute = start.getMinutes(),
+                // second = start.getSeconds(),
+                end = new Date(year + 1, 1, 1),
+                sumSecond = Math.floor((end - start) / 1000),
+                second = Math.floor(sumSecond % 60),
+                minute = Math.floor(sumSecond / 60 % 60),
+                hour = Math.floor(sumSecond / 60 / 60 % 24),
+                day = Math.floor(sumSecond / 60 / 60 / 24 % 30),
+                month = Math.floor(sumSecond / 60 / 60 / 24 / 30 % 12),
+                endyear = Math.floor(sumSecond / 60 % 60),
+                timeleft = year + '年还剩' + month + '月' + day + '天' + hour + '时' + minute + '分' + second + '秒',
+                time = document.getElementById('time');
+            // time.appendChild(time);
+            // console.log(time.innerHTML)
+            time.innerHTML = timeleft;
+
+
+        }
+        setInterval(timeLeft, 1000)
+
+    </script>
+</body>
+
+</html>

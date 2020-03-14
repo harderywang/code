@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event 类</title>
+</head>
+
+<body>
+    <div>请实现一个 Event 类,继承自此类的对象都会拥有两个方法 on,off,once 和 trigger</div>
+    <input type="button" value=Event.count() />
+    <script>
+        //clss类的两种调用
+        class Event {
+            constructor(ele) {
+                this.ele = ele;
+                this.n = 0;
+            }
+            //event事件触发调用eventHandle
+            on(event, eventHandle) {
+                if (event == 'click' || event == "mousedown" || event == "mouseup" || event == "mousemove" || event == "mouseout" || event == "mouseover") {
+                    this.ele.addEventListener(event, eventHandle, false);
+                }
+            }
+            // event事件删除eventHandle
+            off(event, eventHandle) {
+                if (event == 'click') {
+                    this.ele.removeEventListener(event, eventHandle)
+                }
+            }
+            //点击次数
+
+            //event事件只能运行一次eventHandle
+            once(event, eventHandle) {
+
+                if (event == 'click') {
+                    if (this.n === 0) {
+                        this.ele.addEventListener(event, eventHandle, false);
+                        this.n++;
+                    } else {
+                        this.ele.removeEventListener(event, eventHandle);
+                    }
+                }
+                console.log(this.n);
+            }
+
+            // //自动触发even事件
+            trigger(event) {
+                if (event == 'click') {
+                    this.ele.click()
+                }
+            }
+        }
+
+
+        function fun() {
+            console.log('yugu')
+        }
+
+        input = document.getElementsByTagName('input')[0];
+
+        let cl = new Event(input);
+        //cl.on("click", fun);
+        // cl.off("click", fun);
+        cl.once("click", fun);
+        //  div.addEventListener(event, eventHandle, false);
+        cl.trigger('click');
+
+
+    </script>
+</body>
+
+</html>

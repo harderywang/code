@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>写一个方法随机生成指定位数的字符串</div>
+    <script>
+        function getstr(leng) {
+            let str = "";
+            let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
+                'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+            for (i = 0; i < leng; i++) {
+                pos = Math.floor(Math.random() * (arr.length + 1));
+                str += arr[pos];
+            }
+            console.log(str);
+        }
+        getstr(5)
+    </script>
+</body>
+
+</html>

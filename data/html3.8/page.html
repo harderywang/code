@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>现有一个 Page 类,其原型对象上有许多以 post 开头的方法(如 postMsg);
+        另有一拦截函数 chekc,只返回 ture 或 false.请设计一个函数,该函数应批量改造原 Page 的 postXXX
+        方法,在保留其原有功能的同时,为每个 postXXX 方法增加拦截验证功能,
+        当 chekc 返回 true 时继续执行原 postXXX 方法,返回 false 时不再执行原 postXXX 方法</div>
+    <script>
+        class Page {
+            post() {
+                console.log('post');
+            }
+
+            pos() {
+                console.log('pos');
+            }
+
+            post1() {
+                console.log('post1');
+            }
+
+            postfun() {
+                console.log('postfun');
+            }
+
+            post7890() {
+                console.log('post7890');
+            }
+
+            hahapost() {
+                console.log('hahapost');
+            }
+
+            postMsg() {
+                console.log('postMsg');
+            }
+
+        }
+
+
+
+        function value(event) {
+            return event;
+        }
+        function chekc(event) {
+            if (event.length > 5) {
+                let pg = new Page();
+                eval("pg." + event + "()");
+                console.log('chekc', true);
+                return true;
+                // console.log(event)
+            } else {
+                console.log(false);
+                return false;
+            }
+        }
+        // chekc('postMsg')
+
+
+        function Pages(event) {
+            if (event.indexOf('post') == 0) {
+                // console.log(event)
+                chekc(event);
+            } else if (event.indexOf('post') == -1) {
+                Page.event();
+            }
+        }
+        Pages('postMsg')
+        //调用类中方法
+        // let pg = new Page();
+        // pg.post();
+
+    </script>
+</body>
+
+</html>

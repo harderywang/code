@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>isinteger</title>
+</head>
+
+<body>
+    <div>写一个方法判断一个数字是否为整数</div>
+    <script>
+        function isinteger(n) {
+            if (String(n).indexOf('.') === -1) {
+                console.log('正数')
+            } else {
+                console.log('小数')
+            }
+        }
+        isinteger(2.44)
+    </script>
+</body>
+
+</html>

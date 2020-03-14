@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>完成函数 getViewportSize 返回指定窗口的视口尺寸</title>
+    <style>
+        div {
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        完成函数 getViewportSize 返回指定窗口的视口尺寸
+    </div>
+    <script>
+        // function getScrollOffset() {
+        //     let div = document.getElementsByTagName('div')[0];
+        //     // console.log('获取滚动条到顶部的垂直高度', document.getElementById('body').scrollTop)
+        //     // console.log('获取滚动条到左边的垂直宽度', document.getElementById('body').scrollLift)
+        //     console.log('屏幕高度', screen.availHeight)
+        //     console.log('屏幕宽度', screen.availWidth)
+        //     console.log('窗口文档显示高度', window.innerHeight)
+        //     console.log('窗口文档显示宽度', window.innerWidth)
+        //     console.log(div.scrollWidth);//元素中内容的实际的宽
+        //     console.log(div.scrollHeight);//元素中内容的实际的高
+        //     console.log(div.scrollTop);//向上卷曲出去的距离
+        //     console.log(div.scrollLeft);//向左卷曲出去的距离
+
+
+        // }
+        // getScrollOffset();
+        let div = document.getElementsByTagName('div')[0];
+        function getScrollOffset(w) {
+            console.log('x:' + w.clientWidth, 'y: ' + w.clientHeight)
+        }
+        getScrollOffset(div);
+
+
+    </script>
+
+</body>
+
+</html>

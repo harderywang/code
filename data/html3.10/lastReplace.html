@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lastString</title>
+</head>
+
+<body>
+    <div>去除字符串中最后一个指定的字符 </div>
+    <script>
+        function delLast(str) {
+            // let n = str.length - 1;
+            // console.log(str.charAt(n))
+            // let newstr = str.replace(str.charAt((str.length - 1)), '');
+            let newstr = str.substring(0, str.length - 2)
+            console.log(newstr)
+        }
+        let string = 'dfkjlaskdfjsdfksdf';
+        delLast(string)
+    </script>
+
+</body>
+
+</html>

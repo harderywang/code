@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>richText</title>
+</head>
+
+<body>
+    <div>现有一个字符串 richText,是一段富文本,需要显示在页面上.有个要求,需要给其中只包含一个 img 元素的 p 标签增加一个叫 pic 的 class.请编写代码实现.</div>
+    <script>
+        function richText() {
+            let div = document.createElement('div');
+            let p = document.createElement('p');
+            let img = document.createElement('img');
+            let body = document.getElementsByTagName('body')[0];
+
+            p.setAttribute('class', 'pic')
+            console.log(body)
+            body.appendChild(div);
+            div.appendChild(p);
+            p.appendChild(img)
+            console.log(body)
+        }
+        richText()
+    </script>
+</body>
+
+</html>

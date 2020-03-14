@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>品</title>
+    <style>
+        /* direction排成两行 */
+        .box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* justify-content居中 */
+        .up {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        /* justify-content分开 */
+        .boxdown {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 100px;
+        }
+
+        .uptext,
+        .left,
+        .right {
+            background-color: teal;
+            border: 2px solid black;
+            width: 220px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <article class="box">
+        <div class="up">
+            <div class="uptext">上</div>
+        </div>
+
+
+        <div class="boxdown">
+            <div class="left">左</div>
+            <div class="right">右</div>
+        </div>
+    </article>
+
+
+
+</body>
+
+</html>

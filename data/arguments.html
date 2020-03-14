@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>arg</title>
+</head>
+
+<body>
+    <script>
+        // function showargs() {
+        //     console.log(arguments[0]);
+        //     console.log(arguments.length);
+        //     console.log(arguments.callee);
+        //     console.log(arguments.caller);
+        //     console.log(Array.prototype.slice.call(arguments, 0))
+        // }
+
+        // showargs(1, 2, 3, 4, 5);
+
+
+
+        //  父类 
+        function Persion(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        // Persion.prototype.id = 10;
+        // 子类 
+        function Boy(sex) {
+            this.sex = sex;
+        }
+        // 继承实现 1
+        // Boy.prototype = new Persion('wang', 12);
+        // let b = new Boy();
+        // console.log(b.name);
+
+        //2
+        Boy.prototype = Persion.prototype;
+        let a = Boy(5), c = Persion('jj', 34);
+
+        console.log(a);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

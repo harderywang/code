@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cookie</title>
+</head>
+
+<body>
+    <script>
+        let cookie = "_ga=GA1.2.305956178.1580523692; _dx_uzZo5y=c65f70c536f672fd81b29c232fc2b90710580f5ab016982936a2698078a243fbaac09021; __gads=ID=d407d8deded61215:T=1580523692:S=ALNI_Mb0l00HjCdsxkHXtjysGRNmZfjhCg; UM_distinctid=17043ecfccd106-072f332f153c8b-15211c0b-100200-17043ecfccf14f; CNZZDATA1264404098=648645970-1581682361-https%253A%252F%252Fcn.bing.com%252F%7C1581682361; _gid=GA1.2.1284124849.1582884417; CNZZDATA1258390419=303430164-1583329134-https%253A%252F%252Fcn.bing.com%252F%7C1583569229; CNZZDATA1274114788=852229296-1583581577-https%253A%252F%252Fcn.bing.com%252F%7C1583581577; _gat=1"
+        // let cook = document.cookie;
+        let cookieName;
+        let value;
+        let arr = cookie.split(';');
+        for (i = 0; i < arr.length; i++) {
+            cookieName = arr[i].slice(0, arr[i].indexOf('='));
+            value = arr[i].slice(arr[i].indexOf('=') + 1);
+            console.log('名', cookieName, '值', value);
+        }
+        console.log(arr);
+    </script>
+</body>
+
+</html>

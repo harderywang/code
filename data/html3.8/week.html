@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>week</title>
+</head>
+
+<body>
+    <div>请用代码写出(今天是星期 x)其中 x 表示当天是星期几,如果当天是星期一,输出应该是"今天是星期一"</div>
+    <script>
+        function weeks() {
+            let today = new Date();
+            let week = today.getDay();
+            let value = '';
+            switch (week) {
+                case 1: value = '一';
+                    break;
+                case 2: value = '二';
+                    break;
+                case 3: value = '三';
+                    break;
+                case 4: value = '四';
+                    break;
+                case 5: value = '五';
+                    break;
+                case 6: value = '六';
+                    break;
+                default: value = '日';
+            }
+            console.log('今天是星期' + value)
+        }
+        weeks();
+    </script>
+</body>
+
+</html>
