@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>obj</title>
+</head>
+
+<body>
+    <script>
+        let o = {
+            "毕业时间": "2016.09-2020.07",
+            "学校": "安康学院",
+            "专业": "信息管理与信息系统学",
+            "学历": "本科",
+            "主修课程": "HTML、网页设计、数据结构、数据库、ERP、会计学、微观经济学、管理学等",
+            "项目经历": {
+                "时间": "2019.03-2019.07",
+                "名称": "懒人宝",
+                "功能": "实现校内人员在线点餐和配送，缓解校内食堂就餐难问题",
+                "分工": "五人小组，本人负责策划和部分实现",
+                "实现": "使用JavaScript/CSS/HTML",
+                "获奖": "三创竞赛省级二等奖"
+            }
+        }
+        function object(data) {
+            let str = '';
+            for (let key in data) {
+                (function close() {
+                    if (typeof data[key] === 'object') {
+                        //  str += key + ":" + data[key] + "      "
+                        // console.log(str)
+                        for (let k in data[key]) {
+                            str += k + ":" + data[key][k] + "    ";
+                        }
+                    } else {
+                        str += key + ":" + data[key] + "      "
+                    }
+                })();
+
+            }
+            console.log(str)
+            // console.log(Object.prototype.toString(data));
+            // for (let key in data) {
+            // if (Object.prototype.toString(data[key]) === 'string') {
+            //     console.log(data[k])
+            // alert('344')
+
+            // }
+            // if (Object.prototype.toString() == '[object Object]') {
+            //     str += key + ':' + data[key] + "        ";
+            // }
+            // str += key + ':' + data[key] + "        ";
+            // console.log(typeof key)
+            //}
+            // console.log(str);
+        }
+        object(o)
+    </script>
+    <script>
+
+    </script>
+</body>
+
+</html>
