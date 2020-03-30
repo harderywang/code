@@ -1,0 +1,193 @@
+        body{
+            background-image: url('http://pics.sc.chinaz.com/files/pic/pic9/201309/apic1114.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-left: 2em;
+            color:black;
+            background-attachment:fixed;
+             position: relative; 
+             /* min-width: 1000px; */
+        }
+        /* .first{
+            position: relative;
+        } */
+        .image{
+            position: absolute;
+            right: 5%;
+            top: 1%;
+            background-image: url('https://uploads.5068.com/allimg/160518/1-16051Q42521.jpg');
+            background-size: cover;
+            width: 129px;
+            height: 180px;
+        }
+        .first::after{
+            content: '';
+            position: absolute; 
+            height: 2px;
+            width: 70%;
+            background-color: #a89d9e;
+            margin-left: 10%;
+        }
+        .b_concent{
+            width: 100%;
+            position: absolute;
+            margin-left: 10%;
+        }
+        h3{
+            width: 18%;
+            font-size: 2em;
+            margin-left: 40%;
+            /* text-align: center; */
+        }
+        .header{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /* .header_content{
+            flex-direction: column;
+        } */
+        /* .tbody{
+            visibility: hidden;
+        } */
+     
+        .head{
+            margin-left: 10px;
+            font-weight: 500;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .head:hover{
+             cursor: pointer;
+        }
+        .brother{
+            width: 100%;
+            line-height: 10px;
+            margin-left: 1em;
+        }
+        /* .brother::before{
+            content: '';
+            position: absolute; 
+            height: 2px;
+            width: 80%;
+            background-color: #a89d9e;
+        } */
+        h4 ~p{
+            margin-left: 2em;
+        }
+      
+        .information_brother img{
+            position:absolute;
+            float: right;
+            right: 2%;
+            top: 5%;
+            width: 120px; 
+        }
+        .information_brother{
+            display: flex;
+            flex-direction: row;
+            /* justify-content:center; */
+        }
+        .information_brother div{
+            flex-direction: column;
+        }
+        .information_brother div:nth-child(2n){
+            margin-left: 10%;
+            /* position: absolute; */
+        }
+
+        .education_brother{
+            display: flex;
+            flex-direction: row  ;
+            flex-wrap: wrap;
+        }   
+        .education_brother div{
+            flex-direction: column;
+            
+        }
+         .education_brother div:nth-child(2n){
+                margin-left:150px;
+                padding-right: 335px;
+        }
+        .education_brother div:nth-child(3) p{
+            margin-top: 0;
+          }
+
+        .internship_brother{
+            display: flex;
+            flex-direction: column  ;
+        }
+        .internship_brother div p{
+            margin-left: 2em;
+        }
+        .skill_brother{
+            display: flex;
+            flex-direction: row  ;
+        }
+        .skill_brother div  {
+            left: 10em;
+            display: flex;
+            flex-direction: column;
+        }
+        .skill_brother div div{
+            flex-direction: row;
+        }
+        .skill_brother div div div{
+            flex-direction: column;
+        }
+
+        .title0 div,.title1 div{
+            margin-top: 3px;
+            height: 20px;
+        }
+        .content0,.content1{
+            margin-left: 100px;
+            margin-right: 10px;
+        }
+        .air{
+            margin-top: 1px;
+            height: 20px;
+            width: 200px;
+            background-color: slategray;
+            /* border: 1px solid black; */
+        }
+        .content00{ 
+            margin-left: 0;
+            height: 100%;
+            width: 80%;
+            background-color: rgb(57, 150, 57); 
+        }
+        .content01{
+            height: 100%;
+            width: 75%;
+            background-color: rgb(57, 150, 57);
+        }
+        .content02{
+            height: 100%;
+            width: 75%;
+            background-color: rgb(57, 150, 57);
+        }
+        .content03{
+            height: 100%;
+            width: 65%;
+            background-color: rgb(57, 150, 57);
+        }
+        .content10{
+            height: 100%;
+            width: 65%;
+            background-color: rgb(57, 150, 57);
+        }
+        .content11{
+            height: 100%;
+            width: 70%;
+            background-color: rgb(57, 150, 57);
+        }
+        .content12{
+            height: 100%;
+            width: 65%;
+            background-color: rgb(57, 150, 57);
+        }
+        .content13{
+            height: 100%;
+            width: 80%;
+            background-color: rgb(57, 150, 57);
+        }
